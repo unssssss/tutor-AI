@@ -1,0 +1,322 @@
+[
+  {
+    "subject": "mathematics",
+    "topic": "triangles",
+    "qtype": "yesno",
+    "question": "the interior angles of a triangle always add up to 180 degrees.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "this is a basic property of triangles in euclidean geometry.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "mathematics",
+    "topic": "pi",
+    "qtype": "mcq",
+    "question": "what is the value of pi rounded to two decimal places?",
+    "options": ["3.14", "3.41", "3.12", "2.14"],
+    "correct_answer": "3.14",
+    "explanation": "pi is approximately 3.14159, which rounds to 3.14.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "physics",
+    "topic": "sound",
+    "qtype": "yesno",
+    "question": "sound travels faster through water than through air.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "sound moves faster through denser mediums like water, about four times faster than in air.",
+    "difficulty": "medium"
+  },
+  {
+    "subject": "physics",
+    "topic": "units",
+    "qtype": "mcq",
+    "question": "what is the si unit of force?",
+    "options": ["newton", "joule", "watt", "pascal"],
+    "correct_answer": "newton",
+    "explanation": "force is measured in newtons, named after isaac newton.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "chemistry",
+    "topic": "water",
+    "qtype": "yesno",
+    "question": "a water molecule is made of two hydrogen atoms and one oxygen atom.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "water has the chemical formula h2o, meaning two hydrogen atoms bonded to one oxygen atom.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "chemistry",
+    "topic": "elements",
+    "qtype": "mcq",
+    "question": "what is the chemical symbol for sodium?",
+    "options": ["na", "so", "sd", "s"],
+    "correct_answer": "na",
+    "explanation": "sodium's symbol na comes from its latin name, natrium.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "biology",
+    "topic": "the heart",
+    "qtype": "yesno",
+    "question": "the human heart has four chambers.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "the heart has two atria and two ventricles, four chambers in total.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "biology",
+    "topic": "cells",
+    "qtype": "mcq",
+    "question": "which organelle is known as the powerhouse of the cell?",
+    "options": ["mitochondria", "nucleus", "ribosome", "golgi apparatus"],
+    "correct_answer": "mitochondria",
+    "explanation": "mitochondria produce most of the cell's energy in the form of atp.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "history",
+    "topic": "world war 2",
+    "qtype": "yesno",
+    "question": "world war 2 ended in 1945.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "the war ended in 1945 with the surrender of germany in may and japan in september.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "history",
+    "topic": "united states",
+    "qtype": "mcq",
+    "question": "who was the first president of the united states?",
+    "options": ["george washington", "thomas jefferson", "abraham lincoln", "john adams"],
+    "correct_answer": "george washington",
+    "explanation": "george washington served as the first president from 1789 to 1797.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "geography",
+    "topic": "rivers",
+    "qtype": "yesno",
+    "question": "the amazon river is located in africa.",
+    "options": [],
+    "correct_answer": "no",
+    "explanation": "the amazon river is located in south america, mostly in brazil.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "geography",
+    "topic": "continents",
+    "qtype": "mcq",
+    "question": "what is the largest continent by area?",
+    "options": ["asia", "africa", "europe", "north america"],
+    "correct_answer": "asia",
+    "explanation": "asia is the largest continent, covering about 30 percent of earth's land area.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "english",
+    "topic": "grammar",
+    "qtype": "yesno",
+    "question": "a noun is a word that names a person, place, or thing.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "nouns name people, places, things, or ideas.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "english",
+    "topic": "vocabulary",
+    "qtype": "mcq",
+    "question": "which word is a synonym for happy?",
+    "options": ["joyful", "angry", "tired", "confused"],
+    "correct_answer": "joyful",
+    "explanation": "joyful means feeling or showing great happiness, making it a synonym.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "computer science",
+    "topic": "binary",
+    "qtype": "yesno",
+    "question": "binary code uses only the digits 0 and 1.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "binary is a base two number system, so it only uses 0 and 1.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "computer science",
+    "topic": "hardware",
+    "qtype": "mcq",
+    "question": "what does cpu stand for?",
+    "options": ["central processing unit", "computer personal unit", "central program utility", "control processing unit"],
+    "correct_answer": "central processing unit",
+    "explanation": "the cpu is the central processing unit, the main chip that runs instructions.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "mathematics",
+    "topic": "triangles",
+    "qtype": "yesno",
+    "question": "a right triangle has one angle equal to 90 degrees.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "a right triangle is defined by having exactly one 90 degree angle.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "mathematics",
+    "topic": "square roots",
+    "qtype": "mcq",
+    "question": "what is the square root of 64?",
+    "options": ["8", "6", "7", "9"],
+    "correct_answer": "8",
+    "explanation": "8 multiplied by itself equals 64, so the square root of 64 is 8.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "physics",
+    "topic": "light",
+    "qtype": "yesno",
+    "question": "light travels faster than sound.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "light travels at about 300,000 km per second, far faster than sound's roughly 343 meters per second in air.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "physics",
+    "topic": "electricity",
+    "qtype": "mcq",
+    "question": "what is the si unit of electric current?",
+    "options": ["ampere", "volt", "ohm", "watt"],
+    "correct_answer": "ampere",
+    "explanation": "electric current is measured in amperes, often shortened to amps.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "chemistry",
+    "topic": "combustion",
+    "qtype": "yesno",
+    "question": "oxygen is required for combustion to occur.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "combustion is a chemical reaction that needs oxygen to burn fuel and release energy.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "chemistry",
+    "topic": "ph scale",
+    "qtype": "mcq",
+    "question": "what is the ph value of pure water at 25 degrees celsius?",
+    "options": ["7", "0", "14", "1"],
+    "correct_answer": "7",
+    "explanation": "pure water is neutral on the ph scale, which is a ph of 7.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "biology",
+    "topic": "photosynthesis",
+    "qtype": "yesno",
+    "question": "plants release oxygen during photosynthesis.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "photosynthesis converts carbon dioxide and water into glucose and oxygen using sunlight.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "biology",
+    "topic": "blood",
+    "qtype": "mcq",
+    "question": "which blood cells mainly help fight infection?",
+    "options": ["white blood cells", "red blood cells", "platelets", "plasma"],
+    "correct_answer": "white blood cells",
+    "explanation": "white blood cells are part of the immune system and defend the body against infection.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "history",
+    "topic": "united states",
+    "qtype": "yesno",
+    "question": "the declaration of independence was signed in 1776.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "the declaration of independence was adopted on july 4, 1776.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "history",
+    "topic": "ancient egypt",
+    "qtype": "mcq",
+    "question": "which ancient civilization built the pyramids of giza?",
+    "options": ["egyptians", "romans", "greeks", "mayans"],
+    "correct_answer": "egyptians",
+    "explanation": "the pyramids of giza were built by the ancient egyptians as tombs for their pharaohs.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "geography",
+    "topic": "mountains",
+    "qtype": "yesno",
+    "question": "mount everest is the tallest mountain above sea level.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "mount everest stands at about 8,849 meters, the highest point above sea level on earth.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "geography",
+    "topic": "oceans",
+    "qtype": "mcq",
+    "question": "which ocean is the largest by area?",
+    "options": ["pacific", "atlantic", "indian", "arctic"],
+    "correct_answer": "pacific",
+    "explanation": "the pacific ocean is the largest and deepest of earth's oceans.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "english",
+    "topic": "grammar",
+    "qtype": "yesno",
+    "question": "a verb describes an action or state of being.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "verbs express actions, occurrences, or states of being in a sentence.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "english",
+    "topic": "vocabulary",
+    "qtype": "mcq",
+    "question": "which word is an antonym of difficult?",
+    "options": ["easy", "hard", "complex", "tough"],
+    "correct_answer": "easy",
+    "explanation": "easy means not difficult, making it the opposite, or antonym, of difficult.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "computer science",
+    "topic": "web basics",
+    "qtype": "yesno",
+    "question": "html stands for hypertext markup language.",
+    "options": [],
+    "correct_answer": "yes",
+    "explanation": "html, or hypertext markup language, is the standard language used to structure web pages.",
+    "difficulty": "easy"
+  },
+  {
+    "subject": "computer science",
+    "topic": "programming",
+    "qtype": "mcq",
+    "question": "which of these is a programming language?",
+    "options": ["python", "photoshop", "excel", "powerpoint"],
+    "correct_answer": "python",
+    "explanation": "python is a programming language, while the others are application software.",
+    "difficulty": "easy"
+  }
+]

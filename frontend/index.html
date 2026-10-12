@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adaptive learning lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidenav">
+    <div class="brand">
+      <span class="brand-mark">&#9679;</span>
+      <span class="brand-text">learning lab</span>
+    </div>
+    <nav class="tabnav">
+      <button class="nav-btn active" data-tab="dashboard">dashboard</button>
+      <button class="nav-btn" data-tab="learning">learning</button>
+      <button class="nav-btn" data-tab="quiz">quiz</button>
+      <button class="nav-btn" data-tab="ask">ask ai</button>
+      <button class="nav-btn" data-tab="materials">materials</button>
+      <button class="nav-btn" data-tab="iot">iot status</button>
+    </nav>
+    <div class="device-pulse">
+      <span id="pulseDot" class="dot offline"></span>
+      <span id="pulseLabel">device offline</span>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <section id="dashboard" class="tab active">
+      <h1>dashboard</h1>
+
+      <div class="stat-strip">
+        <div class="stat">
+          <span class="stat-label">subject</span>
+          <span id="statSubject" class="stat-value">general</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">learning style</span>
+          <span id="statStyle" class="stat-value">simple explanation</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">current topic</span>
+          <span id="statTopic" class="stat-value">not set</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">quiz score</span>
+          <span id="statScore" class="stat-value">0 / 0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">class material</span>
+          <span id="statMaterial" class="stat-value">none</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>choose your subject</h2>
+        <div class="chip-grid" id="subjectGrid"></div>
+        <div class="row">
+          <input type="text" id="customSubject" placeholder="or type your own subject">
+          <button id="setCustomSubject" class="btn secondary">use this subject</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>learning style</h2>
+        <div class="chip-grid" id="styleGrid"></div>
+      </div>
+
+      <div class="card">
+        <h2>topics to review</h2>
+        <p class="hint">built from your quiz history for the current subject, weakest first.</p>
+        <div id="topicsReview" class="text-box small">answer a few quiz questions to see this fill in.</div>
+      </div>
+    </section>
+
+    <section id="learning" class="tab">
+      <h1>learning</h1>
+
+      <div class="card">
+        <label for="topicInput">what do you want to learn?</label>
+        <div class="row">
+          <input type="text" id="topicInput" placeholder="e.g. photosynthesis">
+          <button id="teachBtn" class="btn">teach me</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>explanation</h2>
+        <div id="explanationBox" class="text-box">pick a topic above to get started.</div>
+      </div>
+
+      <div class="card">
+        <label for="followupInput">ask a follow up question about this topic</label>
+        <div class="row">
+          <input type="text" id="followupInput" placeholder="ask anything about this topic">
+          <button id="followupBtn" class="btn secondary">ask</button>
+        </div>
+        <div id="followupBox" class="text-box small"></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="tab">
+      <h1>quiz</h1>
+
+      <div class="card">
+        <div class="row wrap">
+          <input type="text" id="quizTopic" placeholder="topic (optional)">
+          <select id="quizType">
+            <option value="mcq">multiple choice</option>
+            <option value="yesno">true / false (use the esp8266 buttons)</option>
+          </select>
+          <select id="quizDifficulty">
+            <option value="adaptive" selected>adaptive (based on your recent answers)</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+          <button id="newQuestionBtn" class="btn">new question</button>
+        </div>
+      </div>
+
+      <div class="card question-card hidden" id="questionCard">
+        <div class="question-meta">
+          <span id="questionSource" class="tag"></span>
+          <span id="questionDifficulty" class="tag"></span>
+        </div>
+        <p id="questionText" class="question-text"></p>
+
+        <div id="mcqOptions" class="mcq-options"></div>
+
+        <div id="yesnoOptions" class="yesno-options hidden">
+          <p class="hint">press yes or no on your esp8266 device, or use these buttons.</p>
+          <div class="row">
+            <button class="btn yes-btn" data-answer="yes">yes</button>
+            <button class="btn no-btn" data-answer="no">no</button>
+          </div>
+        </div>
+
+        <div id="answerFeedback" class="feedback"></div>
+        <button id="nextQuestionBtn" class="btn secondary hidden">next question</button>
+      </div>
+    </section>
+
+    <section id="ask" class="tab">
+      <h1>ask ai</h1>
+      <div class="card">
+        <p class="hint">ask about the current topic, request an easier explanation, ask for examples, or ask for practice questions.</p>
+        <div id="chatThread" class="chat-thread"></div>
+        <div class="row">
+          <input type="text" id="chatInput" placeholder="type your message">
+          <button id="chatBtn" class="btn">send</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="tab">
+      <h1>materials</h1>
+
+      <div class="card">
+        <p class="hint">
+          upload class notes, a handout, or a textbook chapter as a pdf or txt file.
+          the ai will use it as its main reference when teaching and generating quiz
+          questions for <strong id="materialSubjectLabel">this subject</strong>.
+          only the first part of a long file is used, about 8 to 10 pages.
+        </p>
+        <div class="row wrap">
+          <input type="file" id="materialFile" accept=".pdf,.txt">
+          <button id="uploadMaterialBtn" class="btn">upload</button>
+          <button id="clearMaterialBtn" class="btn secondary">clear</button>
+        </div>
+        <div id="materialStatus" class="text-box small">no material loaded, the ai will use general knowledge.</div>
+      </div>
+    </section>
+
+    <section id="iot" class="tab">
+      <h1>iot status</h1>
+
+      <div class="card device-panel">
+        <div class="device-row">
+          <span class="device-label">esp8266</span>
+          <span id="iotConnDot" class="dot offline"></span>
+          <span id="iotConnText">disconnected</span>
+        </div>
+        <div class="device-row">
+          <span class="device-label">waiting for answer</span>
+          <span id="iotWaiting" class="mono">no</span>
+        </div>
+        <div class="device-row">
+          <span class="device-label">last button press</span>
+          <span id="iotLastButton" class="mono">-</span>
+        </div>
+        <div class="device-row">
+          <span class="device-label">last result</span>
+          <span id="iotLastResult" class="mono">-</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>wiring reference</h2>
+        <table class="pin-table">
+          <tr><th>function</th><th>pin</th></tr>
+          <tr><td>yes button</td><td class="mono">D1 (GPIO5)</td></tr>
+          <tr><td>no button</td><td class="mono">D2 (GPIO4)</td></tr>
+          <tr><td>green led</td><td class="mono">D5 (GPIO14)</td></tr>
+          <tr><td>red led</td><td class="mono">D6 (GPIO12)</td></tr>
+          <tr><td>buzzer</td><td class="mono">D7 (GPIO13)</td></tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+<script src="vendor/purify.min.js"></script>
+<script src="vendor/marked.min.js"></script>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/auto-render.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
